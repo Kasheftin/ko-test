@@ -1,0 +1,15 @@
+[submodule "lib/jquery"]
+	path = lib/jquery
+	url = https://github.com/jquery/jquery.git
+[submodule "lib/bootstrap"]
+	path = lib/bootstrap
+	url = https://github.com/twitter/bootstrap.git
+[submodule "lib/require"]
+	path = lib/require
+	url = https://github.com/jrburke/requirejs.git
+[submodule "lib/text"]
+	path = lib/text
+	url = https://github.com/requirejs/text.git
+[submodule "lib/knockout"]
+	path = lib/knockout
+	url = https://github.com/SteveSanderson/knockout.git
