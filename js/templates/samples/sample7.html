@@ -1,0 +1,29 @@
+<style>
+.planet { background-color: #AAEECC; padding: 0.25em; border: 1px solid silver; margin-bottom: 0.5em; font-size: 0.75em; }
+.planet.rock { background-color: #EECCAA; }
+</style>
+<h2>Planets</h2>
+<p>
+    <label>
+        <input type='checkbox' data-bind='checked: displayAdvancedOptions' />
+        Display advanced options
+    </label>
+</p>
+ 
+<p data-bind='fadeVisible: displayAdvancedOptions'>
+    Show:
+    <label><input type='radio' name="type" value='all' data-bind='checked: typeToShow' />All</label>
+    <label><input type='radio' name="type" value='rock' data-bind='checked: typeToShow' />Rocky planets</label>
+    <label><input type='radio' name="type" value='gasgiant' data-bind='checked: typeToShow' />Gas giants</label>
+</p>
+ 
+<div data-bind='template: { foreach: planetsToShow,
+                            beforeRemove: hidePlanetElement,
+                            afterAdd: showPlanetElement }'>
+    <div data-bind='attr: { "class": "planet " + type }, text: name'> </div>
+</div>
+ 
+<p data-bind='fadeVisible: displayAdvancedOptions'>
+    <button data-bind='click: addPlanet.bind($data, "rock")'>Add rocky planet</button>
+    <button data-bind='click: addPlanet.bind($data, "gasgiant")'>Add gas giant</button>
+</p>

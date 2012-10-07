@@ -1,0 +1,9 @@
+<h2>Participants</h2>
+Here are the participants:
+<div data-bind="template: { name: 'person-template', data: buyer, afterRender: afterRender}"></div>
+<div data-bind="template: { name: 'person-template', data: seller }"></div>
+ 
+<script type="text/html" id="person-template">
+    <h3 data-bind="text: name"></h3>
+    <p>Credits: <span data-bind="text: credits"></span></p>
+</script>
